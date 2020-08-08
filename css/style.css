@@ -20,6 +20,7 @@ body {
   background-image: url(../img/series/background.jpg);
   background-repeat: no-repeat;
   background-position: top right 20px;
+  
 }
 
 .container {
@@ -209,7 +210,7 @@ body {
   background-position: center;
   background-color: transparent;
   position: absolute;
-  top: 50%;
+  top: auto;
   right: -35px;
 
 }
@@ -249,8 +250,18 @@ menu-button{
 }
 
 /*responsive*/
+@media (max-width: 1024px) {
+  body {
+    background-position: top right -130px;
+    background-size: cover;
+  }
+  .footer {
+    margin-top: 0;
+  }
+}
 
 @media (max-width: 950px) {
+  
   .play {
     display: none;
   }
@@ -268,6 +279,10 @@ menu-button{
 }
 
 @media(max-width: 700px) {
+  body {
+    background-position: top right -70px;
+    background-size: 700px;
+  }
   .menu-button{
     display: block;
     position: absolute;
@@ -278,7 +293,7 @@ menu-button{
     background-color: white;
     border: none;
     cursor: pointer;
-    
+    z-index: 1;
   }
   
   .menu-button::before{
@@ -330,7 +345,7 @@ menu-button{
     background-color: #9D2929;
     width: 250px;
     padding-bottom: 40px;
-
+    z-index: 1;
   }
 
   .header-active{
@@ -378,4 +393,19 @@ menu-button{
   .series {
     width: 80%;
   }
+  .arrow {
+    top: auto;
+    right: 15%;
+  }
+}
+
+@media(max-width: 375px) {
+  body {
+    background-position: top right -70px;
+    background-size: 600px;
+  }
+  .arrow {
+    top: auto;
+    right: 0;
+}
 }
